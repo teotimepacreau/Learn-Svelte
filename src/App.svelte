@@ -37,11 +37,17 @@
 		feedback = feedback.filter((item)=>item.id != itemId) //on est obligé d'assigner pour que ça update
 	}
 
+	// AJOUTER UN AVIS A LA LISTE
+	const addFeedbackToArray = (e)=>{
+		const newFeedback = e.detail
+		feedback = [newFeedback, ...feedback]
+	}
+
 </script>
 
 <main>
 	<div class="container">
-		<FeedbackForm />
+		<FeedbackForm on:add-feedback-to-array={addFeedbackToArray} />
 		<FeedbackStats {count} {average} />
 		<FeedbackList {feedback} on:delete-feedback={deleteFeedback}/>
 	</div>
