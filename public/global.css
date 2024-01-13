@@ -59,6 +59,11 @@
   body {
 	font-family: system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
 	min-height: 100dvh;
+	background-color: rgb(35, 85, 88);
+  }
+
+  *{
+	accent-color: bisque;
   }
   
   /* Set shorter line heights on headings and text-wrap */
@@ -162,14 +167,6 @@
 	border-radius: 0.4rem;
   }
   
-  input[type="text"]:focus-visible,
-  input[type="password"]:focus-visible {
-	border: none;
-	border-bottom: 1px solid var(--accent);
-	background-color: var(--accentwith10opacity);
-	outline: none;
-	box-shadow: none;
-  }
   
   input[type="search"]:focus-visible {
 	background-color: var(--accentwith10opacity);

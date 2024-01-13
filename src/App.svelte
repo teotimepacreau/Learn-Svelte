@@ -39,8 +39,8 @@
 
 	// AJOUTER UN AVIS A LA LISTE
 	const addFeedbackToArray = (e)=>{
-		const newFeedback = e.detail
-		feedback = [newFeedback, ...feedback]
+		feedback.unshift(e.detail)
+		feedback = feedback
 	}
 
 </script>
